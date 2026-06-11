@@ -1,0 +1,180 @@
+/* Post card (replaces generic div rule used for posts) */
+.post-card{
+    background-color: #fdfdfd;
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.06);
+    margin: 8px;
+    box-shadow: 0 4px 10px rgba(16,24,40,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Form styles */
+form.post-form{
+    max-width: 600px;
+    margin: 24px auto;
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form.post-form input[type="text"],
+form.post-form textarea{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cfcfcf;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+form.post-form textarea{
+    min-height: 100px;
+}
+
+form.post-form button{
+    align-self: flex-end;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+form.post-form button:hover{
+    background: #43a047;
+}
+
+/* Small responsive tweak */
+@media (max-width: 480px){
+    form.post-form{ padding: 12px; margin: 12px; }
+    form.post-form button{ width: 100%; }
+}
+
+/* Page layout and typography */
+body{
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg,#f7fafc 0%, #ffffff 100%);
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 24px 12px;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 28px;
+    margin: 8px 0 18px 0;
+    color: #0f172a;
+    letter-spacing: -0.2px;
+}
+
+.posts-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.post-card h3{
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    color: #0b63a8;
+}
+
+.post-card p{
+    margin: 0;
+    color: #374151;
+    line-height: 1.45;
+}
+
+.top-actions{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.new-link{
+    text-decoration: none;
+    background: #0b63a8;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+
+.new-link:hover{ background:#095a8f }
+
+/* Card-level details / back link */
+.details-link{
+    text-decoration: none;
+    background: #0b63a8;
+    color: #ffffff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    align-self: flex-end;
+}
+.details-link:hover{ background: #095a8f }
+
+/* Modifier for the single post details view */
+.post-details{
+    max-width: 720px;
+    margin: 12px auto;
+    align-items: center;
+    text-align: center;
+}
+
+/* Edit / Delete / Action styles */
+.card-actions{
+    display:flex;
+    gap:8px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.edit-link{
+    text-decoration: none;
+    background: #f0ad4e;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+.edit-link:hover{ background:#e0992b }
+
+.btn{
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+.btn-primary{ background: #0b63a8; color:#fff }
+.btn-primary:hover{ background:#095a8f }
+.btn-danger{ background:#d9534f; color:#fff }
+.btn-danger:hover{ background:#c9302c }
+
+/* Form action alignment (used on edit/new forms) */
+.form-actions{
+    display:flex;
+    gap:8px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 8px;
+}
+.form-actions .details-link{ align-self: center; }
